@@ -16,3 +16,5 @@ It's perfect for beginners in the Arch Linux and derivatives community.
 * alias paccino='python3 $PACCINO_PATH/main.py'
 
 4. Done!
+
+*Another way to install Paccino is just downloading zip file from "releases" and extracting the contents to a path (like $HOME). Then, type necessary lines in the "rc" file (steps 2 & 3 above).*

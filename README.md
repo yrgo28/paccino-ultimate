@@ -7,6 +7,10 @@ It's perfect for beginners in the Arch Linux and derivatives community.
 //thanks for use paccino <3
 
 **# HOW TO INSTALL**
+Download file "install.sh" and run it (only for bash shell)
+
+Also you can make this manually following this steps:
+
 1. Clone this repository
 2. Edit your shell rc file (eg: for bash, nano (or your prefered text editor) $HOME/.bashrc)
 3. Type following lines:
@@ -17,4 +21,4 @@ It's perfect for beginners in the Arch Linux and derivatives community.
 
 4. Done!
 
-*Another way to install Paccino is just downloading zip file from "releases" and extracting the contents to a path (like $HOME). Then, type necessary lines in the "rc" file (steps 2 & 3 above).*
+*Another way to install Paccino is just downloading the compressed file from "releases" and extracting the contents to a path (like $HOME). Then, type necessary lines in the "rc" file (steps 2 & 3 above).*

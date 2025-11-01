@@ -15,7 +15,7 @@ class UI:
         pass
 
     def header(self, arg: str):
-        avail = ["main", "more", "install", "remove", "search", "advanced", "sync", "info", "no title"]
+        avail = ["main", "more", "install", "remove", "search", "advanced", "sync", "info", "no title", "aur", "synchronizing", "installing", "removing", "history"]
 
         welcome.ascii().print_ascii()
         if(arg in avail):
@@ -42,6 +42,21 @@ class UI:
 
             elif(arg == "info"):
                 print("Information functions.")
+
+            elif(arg == "aur"):
+                print(f'Install from AUR.')
+
+            elif(arg == "synchronizing"):
+                print('Synchronizing.')
+
+            elif(arg == "installing"):
+                print('Installing a new Package.')
+
+            elif(arg == "removing"):
+                print('Removing a Package.')
+
+            elif(arg == "history"):
+                print("History.")
 
             elif(arg=="no title"):
                 pass

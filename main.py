@@ -22,7 +22,7 @@ adv = backend
 # CHOOSE BLOCK
 
 def choose_more():
-    avail = ["00", "1", "2", "3"] #ADD "4" for credits (unused)
+    avail = ["00", "1", "2", "3", "4", "5"] #ADD "99" for credits (unused)
     choose = input("Type your option: ")
 
     while True:
@@ -42,6 +42,12 @@ def choose_more():
                 more.edit_rc()
 
             elif(choose == "4"):
+                more.history()
+
+            elif(choose == "5"):
+                more.pacman_conf()
+
+            elif(choose == "99"):
                 more.credits()
 
             ui.separator("line")
@@ -211,6 +217,12 @@ def menu_main():
     else:
         pass
 
+    if(rcfile.show_pkg_installed):
+        interact._exec('printf "Installed Packages: $(pacman -Q | wc -l) \n"')
+        ui.separator("enter")
+    else:
+        pass
+
     print(colored("[1] Synchronize", "yellow"))
     print(colored("[2] Install", "cyan"))
     print(colored("[3] Remove", "blue"))
@@ -317,10 +329,14 @@ def menu_more():
     print(f"info: pacman/yay cache clean wizard.")
     ui.separator("enter")
     print(colored("[3] Edit RCFile", "cyan"))
-    print(f"info: Edit configuration file.")
+    print(f"info: Edit paccino's configuration file. (Restart needed)")
     ui.separator("enter")
-    #print(colored("[4] Credits", "green"))
-    #ui.separator("enter")
+    print(colored("[4] History", "green"))
+    print("info: Displays a list of the actions that have been performed.")
+    ui.separator("enter")
+    print(colored("[5] Edit pacman.conf", "red"))
+    print("info: edit the pacman's configuration file.")
+    ui.separator("enter")
     print(colored("[00] Back", "blue"))
     ui.separator("line")
     choose_more()
